@@ -25,14 +25,25 @@ class Human
 	end
 
 	def b_length 
-		return @alter >= 30 ? 69.089 + 2.238 * @oberschenkelknochenlänge - (@alter-30) * 0.06   : 69.089 + 2.238 * @oberschenkelknochenlänge if @geschlecht == "m"
-		@alter >= 30 ? 69.089 + 2.238 * @oberschenkelknochenlänge - (@alter-30) * 0.06   :  61.412 + 2.317 * @oberschenkelknochenlänge if @geschlecht == "f"
+		if(@alter >= 30)
+			return 69.089 + 2.238 * @oberschenkelknochenlänge - (@alter-30) * 0.06 if @geschlecht == "m"
+			return 61.412 + 2.317 * @oberschenkelknochenlänge - (@alter-30) * 0.06 if @geschlecht == "f"
+		end
+		return 69.089 + 2.238 * @oberschenkelknochenlänge if @geschlecht == "m"
+		return 61.412 + 2.317 * @oberschenkelknochenlänge if @geschlecht == "f"
 	end		
 end
 
-luca = Human. new(33, 50, "m")
+luca = Human. new(30, 50, "m")
 puts luca.b_length
 
+beni = Human. new(32, 50, "m")
+puts beni.b_length
 
-ana = Human. new(20, 50, "f")
+ana = Human. new(40, 50, "f")
 puts ana.b_length
+		
+		
+		
+		
+		

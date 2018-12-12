@@ -23,4 +23,5 @@ end
 #end 
 
 puts "Gib eine Zahl ein:"
-puts "Die 7. Fibonacci-Zahl ist: " + fibonacci( gets.chomp.to_i ).to_s
+x = gets.chomp.to_i 
+puts "Die #{x}. Fibonacci-Zahl ist: " + fibonacci( x ).to_s
