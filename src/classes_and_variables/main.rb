@@ -30,4 +30,5 @@ persons = [person1, person2]
 
 persons.each{|_person|
 	_person.speak()
+	puts _person.class
 }
