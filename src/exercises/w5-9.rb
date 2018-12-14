@@ -14,14 +14,11 @@
 
 class Human 
 
-	@alter
-	@oberschenkelknochenlänge
-	@geschlecht
-	
 	def initialize(alter, oberschenkelknochenlänge, geschlecht)
 		@alter = alter
 		@oberschenkelknochenlänge = oberschenkelknochenlänge
 		@geschlecht = geschlecht
+
 	end
 
 	def b_length 
@@ -42,8 +39,5 @@ puts beni.b_length
 
 ana = Human. new(40, 50, "f")
 puts ana.b_length
-		
-		
-		
 		
 		
