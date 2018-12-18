@@ -21,12 +21,12 @@ class Rechner
     end
 end
 
-rechi = Rechner.new
+rechnerobjekt = Rechner.new
 
-puts rechi.add2nums(5,2)
+puts rechnerobjekt.add2nums(5,2)
 
-rechi.extend Substraction
+rechnerobjekt.extend Substraction
 
-puts rechi.multiply2nums(4,4)
+puts rechnerobjekt.multiply2nums(4,4)
 
-puts rechi.sub2nums(10,7)
+puts rechnerobjekt.sub2nums(10,7)
