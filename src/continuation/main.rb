@@ -1,13 +1,27 @@
 #!/usr/bin/ruby -w
+require 'continuation'
+$labels = {}
 
-require "continuation"
-callcc {|cont|
-  for i in 0..4
-    print "\n#{i}: "
-    for j in i*5...(i+1)*5
-      cont.call() if j == 17
-      printf "%3d", j
-    end
+def label(label_name)
+  callcc { |continuation|   $labels[label_name] = continuation }
+end
+
+def goto(label_name)
+  unless $labels.has_key? label_name
+    raise "No label #{label_name}"
   end
-}
-puts
+  $labels[label_name].call
+end
+
+i = 1
+puts "entering loop"
+label "loop"
+if i < 10
+  puts i
+  i += 1
+  goto "loop"
+end
+puts "loop done"
+puts "i is #{i}"
+
+# https://max.computer/blog/delimited-continuations-in-ruby-part-1/
