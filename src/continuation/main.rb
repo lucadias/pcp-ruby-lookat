@@ -11,14 +11,3 @@ callcc {|cont|
   end
 }
 puts
-
-f = Fiber.new {
-  puts "Fiber says Hello"
-  Fiber.yield
-  puts "Fiber says Goodbye"
-}
-
-puts "Caller says Hello"
-f.resume
-puts "Caller says Goodbye"
-f.resume  
