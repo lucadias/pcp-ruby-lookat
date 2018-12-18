@@ -1,3 +1,4 @@
+#Code aus: https://de.wikibooks.org/wiki/Ruby-Programmierung:_Vererbung
 class Plant
     def initialize(name)
         @name = name
@@ -16,6 +17,7 @@ class Tree < Plant
         @has_trunk
     end
 end
+
 
 birke = Tree.new("birke")
 

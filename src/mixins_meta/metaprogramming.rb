@@ -4,9 +4,8 @@ class Class
     end
 end
 
+puts Integer.superhiddenfunction
 
-
-puts Class.superclass.superclass
 class Rechner
     def add2nums(var1, var2)
         var1.+(var2)

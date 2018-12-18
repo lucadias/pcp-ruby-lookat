@@ -25,8 +25,6 @@ rechi = Rechner.new
 
 puts rechi.add2nums(5,2)
 
-
-#dynamische klasse erweitern
 rechi.extend Substraction
 
 puts rechi.multiply2nums(4,4)
