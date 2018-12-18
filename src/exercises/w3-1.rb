@@ -17,11 +17,25 @@ def fibonacci(n)
 	n <= 1 ? n :  fibonacci( n - 1 ) + fibonacci( n - 2 ) 
 end
 
-#def fibonacci( n )
-#    return  n  if n <= 1 
-#    fibonacci( n - 1 ) + fibonacci( n - 2 )
-#end 
+
+
 
 puts "Gib eine Zahl ein:"
 x = gets.chomp.to_i 
 puts "Die #{x}. Fibonacci-Zahl ist: " + fibonacci( x ).to_s
+
+
+#Fibonacci mit memoization -> https://github.com/renshuki/fibonacci-ruby/blob/master/memoization.rb
+	#startIndex = ARGV[0].to_i
+	#endIndex = ARGV[1].to_i
+	#@cache = [0,1]
+
+	#def fibonacci(n)
+	#  return @cache[n] if @cache[n]
+	#  @cache[n] = fibonacci(n-1) + fibonacci(n-2)
+	#end
+
+	#(startIndex..endIndex).each do |n|
+	#  puts fibonacci(n)
+	#end
+

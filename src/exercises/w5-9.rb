@@ -18,7 +18,6 @@ class Human
 		@alter = alter
 		@oberschenkelknochenlänge = oberschenkelknochenlänge
 		@geschlecht = geschlecht
-
 	end
 
 	def b_length 
